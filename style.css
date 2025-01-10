@@ -1,4 +1,4 @@
-/* Your Original CSS Code (Unchanged) */
+/* Global Styles */
 body {
     margin: 0;
     padding: 0;
@@ -14,6 +14,7 @@ body {
     width: 100%;
 }
 
+/* Section Styling */
 .section {
     height: 100vh; /* Full viewport height */
     width: 100%;
@@ -106,24 +107,26 @@ body {
     color: #fff;
 }
 
-/* Mobile-Specific Styles for Display Support */
+/* Add mobile-specific styles using media queries */
 @media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
     .section {
         height: auto; /* Allow flexible height for content */
-        min-height: 100vh; /* Ensure sections are at least full viewport height */
-        background-size: contain; /* Scale the background image to fit */
-        padding: 0; /* Avoid unnecessary padding */
+        min-height: 100vh; /* Ensure sections remain full viewport height */
+        background-size: contain; /* Make the background image fit within the screen */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent repeating */
     }
 
     #discordButton, #eventsButton {
         position: static; /* Allow buttons to stack */
         display: block; /* Make buttons appear in a vertical stack */
-        margin: 10px auto; /* Center buttons and add spacing between them */
+        margin: 10px auto; /* Center buttons and add space between them */
         width: 90%; /* Make buttons almost full-width for smaller screens */
         font-size: 1em; /* Adjust font size for smaller screens */
-    }
-
-    body {
-        font-size: 14px; /* Adjust text size for smaller screens */
+        padding: 10px;
     }
 }
