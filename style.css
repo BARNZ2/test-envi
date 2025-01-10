@@ -1,0 +1,129 @@
+/* Your Original CSS Code (Unchanged) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    height: auto; /* Allow the height to grow as needed */
+}
+
+.background-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.section {
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* Specific Sections with Background Images */
+#section1 {
+    background: url('./Kanto_Things_.png') no-repeat center center;
+    background-size: cover;
+    position: relative; /* To position the Discord button */
+}
+
+#section2 {
+    background: url('./2.png') no-repeat center center;
+    background-size: cover;
+}
+
+#section3 {
+    background: url('./3.png') no-repeat center center;
+    background-size: cover;
+}
+
+#section4 {
+    background: url('./4.png') no-repeat center center;
+    background-size: cover;
+}
+
+#section5 {
+    background: url('./5.png') no-repeat center center;
+    background-size: cover;
+}
+
+#section6 {
+    background: url('./6.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Styled Discord Button */
+#discordButton {
+    position: absolute; /* Position relative to #section1 */
+    top: 79.3%; /* Adjust to match the "Discord" button's position in the image */
+    left: 25.8%; /* Adjust to match the "Discord" button's position in the image */
+    padding: 12px 25px; /* Add padding for a button shape */
+    background-color: #00ff00; /* Neon green background */
+    color: #000; /* Black text color */
+    font-size: 1.4em; /* Slightly larger font size */
+    font-family: 'Arial Black', sans-serif; /* Bold text font */
+    font-weight: bold; /* Extra bold text */
+    text-transform: uppercase; /* Uppercase letters */
+    border: 3px solid #00ff00; /* Border matching the background */
+    border-radius: 25px; /* Fully rounded edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect for the Discord Button */
+#discordButton:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+    background-color: #1aff1a; /* Brighter neon green on hover */
+    color: #fff; /* Change text to white on hover */
+}
+
+#eventsButton {
+    position: absolute;
+    top: 79.3%; /* Align with the Discord button */
+    left: 35%; /* Position next to Discord button */
+    padding: 12px 25px;
+    background-color: #00ff00; /* Different color for Events */
+    color: #000;
+    font-size: 1.4em;
+    font-family: 'Arial Black', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 3px solid #00ff00;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#eventsButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    background-color: #1aff1a;
+    color: #fff;
+}
+
+/* Mobile-Specific Styles for Display Support */
+@media only screen and (max-width: 768px) {
+    .section {
+        height: auto; /* Allow flexible height for content */
+        min-height: 100vh; /* Ensure sections are at least full viewport height */
+        background-size: contain; /* Scale the background image to fit */
+        padding: 0; /* Avoid unnecessary padding */
+    }
+
+    #discordButton, #eventsButton {
+        position: static; /* Allow buttons to stack */
+        display: block; /* Make buttons appear in a vertical stack */
+        margin: 10px auto; /* Center buttons and add spacing between them */
+        width: 90%; /* Make buttons almost full-width for smaller screens */
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    body {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+}
